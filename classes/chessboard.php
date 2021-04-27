@@ -32,10 +32,9 @@ class Chessboard
     /**
      * Method buildBoard
      *
-     * @param string $moveTo Set the direction
      * @return void
      */
-    public function buildBoard(string $moveTo = null)
+    public function buildBoard()
     {    
         $this->setPattern();           
         echo '<table class="chessboard">';
@@ -64,12 +63,12 @@ class Chessboard
 	 * @param int $row Col index/increment
 	 * @return void
 	 */
-	private function setPattern(int $queenNumber = 0, int $row = 0)
+	private function setPattern(int $numberOfQueens = 0, int $row = 0)
 	{
 		for ($col = 0; $col < $this->totalQueens; $col++) {
-			if ($this->checkPossibility($row, $col)) {
+			if ($this->checkPossibilities($row, $col)) {
 				$this->board[$row][$col] = 1;				
-				if ($queenNumber === $this->totalQueens - 1 || $this->setPattern($queenNumber + 1, $row + 1) === true) { 
+				if ($numberOfQueens === $this->totalQueens - 1 || $this->setPattern($numberOfQueens + 1, $row + 1) === true) { 
                     return true;
                 }
 				$this->board[$row][$col] = 0;
@@ -79,13 +78,13 @@ class Chessboard
 	}
 	
 	/**
-	 * Method checkPossibility
+	 * Method checkPossibilities
 	 *
 	 * @param int $row Row index/increment
 	 * @param int $col Coll index/increment
 	 * @return bool
 	 */
-	private function checkPossibility(int $row, int $col) : bool
+	private function checkPossibilities(int $row, int $col) : bool
 	{
 		for ($i = 0; $i < $row; $i++) {
 			if ($this->board[$i][$col] === 1) { 

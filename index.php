@@ -11,15 +11,11 @@
         <?php 
             include 'classes/Chessboard.php';
             $chessboard = new Chessboard;
-            $chessboard->buildBoard($_GET['move'] ?? null);
-            $chessboard->setPattern();
+            $chessboard->buildBoard();
 
-        //     $c =$chessboard->randomPieces();
-             echo '<pre>';
+            echo '<pre>';
             print_r($chessboard);
             echo '</pre>';
-        //    echo ' -- ';
-        //    echo count($c);
 
         ?>
     </div>
