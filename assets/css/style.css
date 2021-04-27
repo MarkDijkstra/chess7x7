@@ -1,0 +1,45 @@
+.container{
+    width: 600px;
+    margin: 200px auto;
+}
+.chessboard{
+    border: 2px solid #222;
+    width: 600px;
+    height: 600px;
+    margin-bottom:40px;
+}
+td small{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 11px;
+}
+.even .odd,
+.odd .even {
+    background-color : brown;
+}
+.field{
+    position: relative;
+    height: 100%;
+}
+.piece{
+    border:1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 60px;
+    background-color: black;
+    color: #fff;
+}
+/* .white{
+    background-color: white;
+} */
+/* .black{
+    background-color: black;
+    color: #fff;
+} */
