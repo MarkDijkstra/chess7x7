@@ -11,6 +11,8 @@
             $chessboard = new Chessboard;
             $chessboard->buildBoard();
         ?>
+        <br/>
+        <p>Posibilities: 40</p>
     </div>
 </body>
 </html>
