@@ -81,7 +81,7 @@ class Chessboard
 	 * Method checkPossibilities
 	 *
 	 * @param int $row Row index/increment
-	 * @param int $col Coll index/increment
+	 * @param int $col Collumn index/increment
 	 * @return bool
 	 */
 	private function checkPossibilities(int $row, int $col) : bool
