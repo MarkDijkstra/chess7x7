@@ -87,16 +87,16 @@ class Chessboard
 	private function checkPossibilities(int $row, int $col) : bool
 	{
 		for ($i = 0; $i < $row; $i++) {
-			if ($this->board[$i][$col] === 1) { 
+            if ($this->board[$i][$col] === 1) { 
                 return false; 
             }
-			$diaX = $row - 1 - $i;
-			$diaY = $col - 1 - $i;
-			if ($diaY >= 0 && $this->board[$diaX][$diaY] === 1) {
+            $diaX = $row - 1 - $i;
+            $diaY = $col - 1 - $i;
+            if ($diaY >= 0 && $this->board[$diaX][$diaY] === 1) {
                 return false;
             }
 			$diaY = $col + 1 + $i;
-			if ($diaY < $this->totalQueens && $this->board[$diaX][$diaY] === 1) { 
+            if ($diaY < $this->totalQueens && $this->board[$diaX][$diaY] === 1) { 
                 return false; 
             }
 		}		
