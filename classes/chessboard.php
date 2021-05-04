@@ -9,9 +9,9 @@ class Chessboard
 
     public function __construct()
     {
-		for ($i = 0; $i < $this->totalQueens; $i++) {
-			$this->board[$i] = array_fill(0, $this->totalQueens, 0);
-		}
+        for ($i = 0; $i < $this->totalQueens; $i++) {
+            this->board[$i] = array_fill(0, $this->totalQueens, 0);
+        }
     }
 
     /**
